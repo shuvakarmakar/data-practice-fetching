@@ -8,12 +8,12 @@ const Country = ({ country }) => {
 
     const [visited, setVisited] = useState(false)
 
-    const handleVisited = () =>{
+    const handleVisited = () => {
         setVisited(!visited)
     }
     return (
-        <div className="country">
-            <h3>Name: {name.common}</h3>
+        <div className={`country ${visited ? 'visited' : 'non-visited'}`}>
+            <h3 style={{ color: visited ? 'Purple' : 'white'}}>{name.common}</h3>
             <img src={flags.png} alt="" />
             <h3>Capital of This Country : {capital}</h3>
             <h4>Total Area of this country: {area}</h4>
