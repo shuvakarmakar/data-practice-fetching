@@ -8,5 +8,8 @@ export const router = createBrowserRouter([
         path: "/",
         element: <App></App>,
     },
-    
+    {
+        path: "/test",
+        element: 'This is for test',
+    }
 ]);
